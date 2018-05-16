@@ -4,6 +4,7 @@ using System;
 using System.Threading;
 using System.Linq;
 
+
 public class Loom : MonoBehaviour {
 	public static int maxThreads = 8;
 	static int numThreads;
@@ -31,8 +32,6 @@ public class Loom : MonoBehaviour {
 	{
 		if (!initialized)
 		{
-			print("started");
-
 			if (!Application.isPlaying)
 				return;
 			initialized = true;
@@ -77,7 +76,6 @@ public class Loom : MonoBehaviour {
 	public static Thread RunAsync(Action a)
 	{
 		Initialize();
-		print("New Thred");
 		while (numThreads >= maxThreads)
 		{
 			Thread.Sleep(1);

@@ -1,164 +1,151 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
-using UnityEngine.UI;
-using System;
-using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading;
-using System.Collections.Generic;
-using GoogleARCore;
-using JetBrains.Annotations;
-using UnityEngine.XR;
-using GoogleARCore;
+using UnityEngine;
+using UnityEngine.UI;
 
+namespace MyScripts.Net
+{
+    public class Connecting : MonoBehaviour {
+        public Camera MainCamera;
+        public Text IpText;
 
-public class Connecting : MonoBehaviour {
-    public Camera MainCamera;
-//    private GameObject[] ElementList = new GameObject[0];
-    public Text IpText;
-
-    // Conection
-    private TcpListener _listner;
-    private const int Port = 8010;
-    private bool _stop;
-    private List<TcpClient> clients = new List<TcpClient>();
-    //This must be the-same with SEND_COUNT on the client
-    private const int SEND_RECEIVE_COUNT = 20;
-
-    // Info
-    private float[] _cameraTransformInfo;
-    private HashSet<GameObject> _elements = new HashSet<GameObject>();
-    private int _elementIndex = 0;
-
+        // Conection
+        private TcpListener _listner;
+        private const int Port = 8010;
+        private bool _stop;
+        private List<TcpClient> clients = new List<TcpClient>();
     
-    private void Start()
-    {
-        Application.runInBackground = true;
-        //Start WebCam coroutine
-        StartCoroutine(InitAndWaitForWebCamTexture());       
-    }
+        // Stores the camera texture
+        private Texture2D cameraTexture;
+    
+        //This must be the-same with SEND_COUNT on the client
+        private const int SEND_RECEIVE_COUNT = 20;
 
-
-    //Converts the data size to byte array and put result to the fullBytes array
-    void byteLengthToFrameByteArray(int byteLength, byte[] fullBytes)
-    {
-        //Clear old data
-        Array.Clear(fullBytes, 0, fullBytes.Length);
-        //Convert int to bytes
-        byte[] bytesToSendCount = BitConverter.GetBytes(byteLength);
-        //Copy result to fullBytes
-        bytesToSendCount.CopyTo(fullBytes, 0);
-    }
-
-    IEnumerator InitAndWaitForWebCamTexture()
-    {
-        
-        // Connect to the server
-        _listner = new TcpListener(IPAddress.Any, Port);
-        _listner.Start();
-        IpText.text = Network.player.ipAddress;
-        //Start sending coroutine
-        StartCoroutine(SenderCor());
-        yield return null;
-    }
-
-    WaitForEndOfFrame endOfFrame = new WaitForEndOfFrame();
-
-    IEnumerator SenderCor()
-    {
-
-        bool isConnected = false;
-        TcpClient client = null;
-        NetworkStream stream = null;
-
-        // Wait for client to connect in another Thread 
-        Loom.RunAsync(() =>
+        private void Start()
         {
-            while (!_stop)
-            {
-                // Wait for client connection
-                client = _listner.AcceptTcpClient();
-                // We are connected
-                clients.Add(client);
-
-                isConnected = true;
-                // Get a stream object for reading and writing
-                stream = client.GetStream();
-            }
-        });
-
-        //Wait until client has connected
-        while (!isConnected)
-        {
-            yield return null;
+//        Application.runInBackground = true;
+            StartCoroutine(Connect());       
         }
 
-        bool readyToGetFrame = true;
 
-        byte[] cameraTextureLength = new byte[SEND_RECEIVE_COUNT];
-
-        while (!_stop)
+        //Converts the data size to byte array and put result to the fullBytes array
+        void byteLengthToFrameByteArray(int byteLength, byte[] fullBytes)
         {
-            //Wait for End of frame
-            yield return endOfFrame;
-          
-            // Capture the camera texture
-            RenderTexture targetTexture = MainCamera.targetTexture;
-            RenderTexture.active = targetTexture;
-            Texture2D texture2D = new Texture2D(targetTexture.width, targetTexture.height, TextureFormat.RGB24, false);
-            texture2D.ReadPixels(new Rect(0, 0, targetTexture.width, targetTexture.height), 0, 0);
-            texture2D.Apply();
-            byte[] cameraTextureBytes = texture2D.EncodeToPNG();
-            DestroyImmediate(texture2D);
-            byteLengthToFrameByteArray(cameraTextureBytes.Length, cameraTextureLength);
-            
-            //Wait until we are ready to get new frame(Until we are done sending data)
-            while (!readyToGetFrame)
+            //Clear old data
+            Array.Clear(fullBytes, 0, fullBytes.Length);
+            //Convert int to bytes
+            byte[] bytesToSendCount = BitConverter.GetBytes(byteLength);
+            //Copy result to fullBytes
+            bytesToSendCount.CopyTo(fullBytes, 0);
+        }
+
+        WaitForEndOfFrame endOfFrame = new WaitForEndOfFrame();
+
+        IEnumerator Connect()
+        {
+
+            bool isConnected = false;
+            TcpClient client;
+            NetworkStream stream = null;
+
+            // Connect to the server
+            _listner = new TcpListener(IPAddress.Any, Port);
+            _listner.Start();
+            IpText.text = "Connect to: " + Network.player.ipAddress;
+        
+            // Wait for client to connect in another Thread 
+            Loom.RunAsync(() =>
+            {
+                while (!_stop)
+                {
+                    // Wait for client connection
+                    client = _listner.AcceptTcpClient();
+                
+                    // connected
+                    clients.Add(client);
+                    isConnected = true;
+                    IpText.text = "Connected";
+                
+                    // Get a stream object for reading and writing
+                    stream = client.GetStream();
+                }
+            });
+
+            //Wait until client has connected
+            while (!isConnected)
             {
                 yield return null;
             }
-            //Set readyToGetFrame false
-            readyToGetFrame = false;
 
-            Loom.RunAsync(() =>
+            StartCoroutine(SendBytes(stream));
+
+        }
+
+        IEnumerator SendBytes(Stream stream)
+        {
+            bool readyToGetFrame = true;
+            byte[] cameraTextureLength = new byte[SEND_RECEIVE_COUNT];
+
+            while (!_stop)
             {
-                              
-                // Send the mobile camera texture
-                stream.Write(cameraTextureLength, 0, cameraTextureLength.Length);
-                stream.Write(cameraTextureBytes, 0, cameraTextureBytes.Length);
-                
-                // Set readyToGetFrame true
-                readyToGetFrame = true;
-            });
+                //Wait for End of frame
+                yield return endOfFrame;
 
+                // Capture the camera texture
+                byte[] cameraTextureBytes = GetCameraBytes();
+                byteLengthToFrameByteArray(cameraTextureBytes.Length, cameraTextureLength);
+
+                //Wait until we are ready to get new frame(Until we are done sending data)
+                while (!readyToGetFrame)
+                {
+                    yield return null;
+                }
+
+                //Set readyToGetFrame false
+                readyToGetFrame = false;
+
+                Loom.RunAsync(() =>
+                {
+
+                    // Send the mobile camera texture
+                    stream.Write(cameraTextureLength, 0, cameraTextureLength.Length);
+                    stream.Write(cameraTextureBytes, 0, cameraTextureBytes.Length);
+
+                    // Set readyToGetFrame true
+                    readyToGetFrame = true;
+                });
+            }
         }
-    }
 
-    private String TransformVector2String(float[] vector)
-    {
-        String result="";
-        foreach (var parameter in vector)
+        private byte[] GetCameraBytes()
         {
-            result += parameter+" ";
+            RenderTexture targetTexture = MainCamera.targetTexture;
+            RenderTexture.active = targetTexture;
+            cameraTexture = new Texture2D(targetTexture.width, targetTexture.height, TextureFormat.RGBA32, false);
+            cameraTexture.ReadPixels(new Rect(0, 0, targetTexture.width, targetTexture.height), 0, 0);
+            cameraTexture.Apply();
+            byte[] cameraTextureBytes = cameraTexture.EncodeToPNG();
+            //DestroyImmediate(texture2D);
+            return cameraTextureBytes;
         }
 
-        return result;
-    }
-    
-    // stop everything
-    private void OnApplicationQuit()
-    {
-        _stop = true;
+        // stop everything
+        private void OnApplicationQuit()
+        {
+            _stop = true;
         
-        if (_listner != null)
-        {
-            _listner.Stop();
-        }
+            if (_listner != null)
+            {
+                _listner.Stop();
+            }
 
-        foreach (TcpClient c in clients)
-            c.Close();
-    }
+            foreach (TcpClient c in clients)
+                c.Close();
+        }
     
+    }
 }

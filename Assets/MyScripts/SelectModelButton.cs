@@ -9,13 +9,15 @@ namespace MyScripts
 
         public GameObject Model;
         public GameObject Controller;
-        public GameObject Panel;
+        public Button other;
 
         private HelloARController _scriptController;
 
         private void Start()
         {
             _scriptController = Controller.GetComponent<HelloARController>();
+            _scriptController.modelPrefab = null;
+            GetComponent<Button>().image.color = Color.white;
         }
 
         public void OnClick()
@@ -23,14 +25,13 @@ namespace MyScripts
             if (_scriptController.modelPrefab == Model)
             {
                 _scriptController.modelPrefab = null;
-                Panel.SetActive(false);
+                GetComponent<Button>().image.color = Color.white;
             }
             else
             {
                 _scriptController.modelPrefab = Model;
-                Panel.SetActive(true);
-                Panel.transform.position = new Vector3(transform.position.x,transform.position.y,1);
-                
+                GetComponent<Button>().image.color = Color.gray;
+                other.image.color = Color.white;
             } 
                 
         }

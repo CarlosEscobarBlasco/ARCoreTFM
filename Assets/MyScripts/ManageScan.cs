@@ -1,7 +1,7 @@
 ﻿using GoogleARCore;
 using GoogleARCore.HelloAR;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace MyScripts
 {
@@ -11,7 +11,6 @@ namespace MyScripts
 		public GameObject ModelSelector;
 		public GameObject SnackBar;
 		public GameObject PointCloud;
-//		public GameObject Sender;
 
 		private ARCoreSession _sesion;
 		private bool _enable = true;
@@ -23,25 +22,14 @@ namespace MyScripts
 
 		public void ChangeScanStatus()
 		{
-//			Sender.SetActive(true);
 			_enable = !_enable;
 			_sesion.SessionConfig.EnablePlaneFinding = _enable;
 			ModelSelector.SetActive(_enable);
 			SnackBar.SetActive(_enable);
 			PointCloud.SetActive(_enable);
 			_sesion.OnEnable();
+			GetComponentInChildren<Text>().text = _enable ? "Done" : "Edit";
 			if (!_enable) Controller.GetComponent<HelloARController>().modelPrefab = null; 
-		}
-
-		public void ChangeScene()
-		{
-			_enable = !_enable;
-			_sesion.SessionConfig.EnablePlaneFinding = _enable;
-			ModelSelector.SetActive(_enable);
-			SnackBar.SetActive(_enable);
-			PointCloud.SetActive(_enable);
-			_sesion.OnEnable();
-			SceneManager.LoadScene("SenderScene");
 		}
 
 	}
