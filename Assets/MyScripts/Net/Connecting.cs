@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,12 +90,18 @@ namespace MyScripts.Net
         {
             bool readyToGetFrame = true;
             byte[] cameraTextureLength = new byte[SEND_RECEIVE_COUNT];
+            byte[] collisionMessageLength = new byte[SEND_RECEIVE_COUNT];
 
             while (!_stop)
             {
                 //Wait for End of frame
                 yield return endOfFrame;
 
+                // Send collision information
+                string collisionMessage = "Hola mundo";
+                byte[] collisionMessageBytes = Encoding.ASCII.GetBytes(collisionMessage);
+                byteLengthToFrameByteArray(collisionMessageBytes.Length, collisionMessageLength);
+                
                 // Capture the camera texture
                 byte[] cameraTextureBytes = GetCameraBytes();
                 byteLengthToFrameByteArray(cameraTextureBytes.Length, cameraTextureLength);
@@ -110,7 +117,11 @@ namespace MyScripts.Net
 
                 Loom.RunAsync(() =>
                 {
-
+                    
+                    // Send camera information
+                    stream.Write(collisionMessageLength, 0, collisionMessageLength.Length);
+                    stream.Write(collisionMessageBytes, 0, collisionMessageBytes.Length);
+                    
                     // Send the mobile camera texture
                     stream.Write(cameraTextureLength, 0, cameraTextureLength.Length);
                     stream.Write(cameraTextureBytes, 0, cameraTextureBytes.Length);
@@ -125,11 +136,10 @@ namespace MyScripts.Net
         {
             RenderTexture targetTexture = MainCamera.targetTexture;
             RenderTexture.active = targetTexture;
-            cameraTexture = new Texture2D(targetTexture.width, targetTexture.height, TextureFormat.RGBA32, false);
+            cameraTexture = new Texture2D(targetTexture.width, targetTexture.height, TextureFormat.RGB24, false);
             cameraTexture.ReadPixels(new Rect(0, 0, targetTexture.width, targetTexture.height), 0, 0);
             cameraTexture.Apply();
             byte[] cameraTextureBytes = cameraTexture.EncodeToPNG();
-            //DestroyImmediate(texture2D);
             return cameraTextureBytes;
         }
 
