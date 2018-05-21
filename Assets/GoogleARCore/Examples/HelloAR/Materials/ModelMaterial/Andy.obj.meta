@@ -13,7 +13,12 @@ ModelImporter:
     2300000: Andy_GEO
     3300000: Andy_GEO
     4300000: Andy_GEO
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Andy_GEOMat
+    second: {fileID: 2100000, guid: 572e1e52514434db5a8ce3957db3b3fd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -57,6 +62,7 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

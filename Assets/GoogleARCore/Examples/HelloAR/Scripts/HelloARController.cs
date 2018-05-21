@@ -18,6 +18,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
+using System.Net;
+using UnityEngine.UI;
+
 namespace GoogleARCore.HelloAR
 {
     using System.Collections.Generic;
@@ -54,6 +57,11 @@ namespace GoogleARCore.HelloAR
         /// A gameobject parenting UI for displaying the "searching for planes" snackbar.
         /// </summary>
         public GameObject SearchingForPlaneUI;
+
+        /// <summary>
+        /// My Variables
+        /// </summary>
+        public CreateOrDelete CreateOrDeleteScript;
 
         /// <summary>
         /// A list to hold new planes ARCore began tracking in the current frame. This object is used across
@@ -136,7 +144,13 @@ namespace GoogleARCore.HelloAR
             {
                 return;
             }
-
+            
+            if (!CreateOrDeleteScript.IsInCreateState)
+            {
+                RemoveClickedElement(touch);
+                return;
+            }
+            
             // Raycast against the location the player touched to search for planes.
             TrackableHit hit;
             TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinPolygon |
@@ -164,6 +178,13 @@ namespace GoogleARCore.HelloAR
                 // Make model model a child of the anchor.
                 modelObject.transform.parent = anchor.transform;
             }
+        }
+
+        private void RemoveClickedElement(Touch touch)
+        {
+            Ray raycast = FirstPersonCamera.ScreenPointToRay(touch.position);
+            RaycastHit raycastHit;
+            if (Physics.Raycast(raycast, out raycastHit))Destroy(raycastHit.transform.gameObject);
         }
 
         /// <summary>

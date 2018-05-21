@@ -9,7 +9,7 @@ namespace MyScripts
 
         public GameObject Model;
         public GameObject Controller;
-        public Button other;
+        public Button[] Others;
 
         private HelloARController _scriptController;
 
@@ -31,7 +31,10 @@ namespace MyScripts
             {
                 _scriptController.modelPrefab = Model;
                 GetComponent<Button>().image.color = Color.gray;
-                other.image.color = Color.white;
+                foreach (var button in Others)
+                {
+                    button.image.color = Color.white;
+                }
             } 
                 
         }
