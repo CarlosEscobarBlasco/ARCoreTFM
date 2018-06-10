@@ -15,14 +15,14 @@ public class CreateOrDelete : MonoBehaviour
 		Create.image.color = Color.gray;
 	}
 
-	public void CreateModel()
+	public void CreateState()
 	{
 		IsInCreateState = true;
 		Delete.image.color = Color.white;
 		Create.image.color = Color.gray;
 	}
 
-	public void DelteModel()
+	public void DeleteState()
 	{
 		IsInCreateState = false;
 		Delete.image.color = Color.gray;

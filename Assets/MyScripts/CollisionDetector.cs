@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 namespace MyScripts
 {
-    public class Collision : MonoBehaviour
+    public class CollisionDetector : MonoBehaviour
     {
 
-        public Connecting Sender;
+        public Sender Sender;
         
         private void OnTriggerEnter(Collider other)
         {

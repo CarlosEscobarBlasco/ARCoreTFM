@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace MyScripts
 {
-    public class SelectModelButton : MonoBehaviour
+    public class ObjectSelector : MonoBehaviour
     {
 
         public GameObject Model;
@@ -16,20 +16,20 @@ namespace MyScripts
         private void Start()
         {
             _scriptController = Controller.GetComponent<HelloARController>();
-            _scriptController.modelPrefab = null;
+            _scriptController.virtualObject = null;
             GetComponent<Button>().image.color = Color.white;
         }
 
         public void OnClick()
         {
-            if (_scriptController.modelPrefab == Model)
+            if (_scriptController.virtualObject == Model)
             {
-                _scriptController.modelPrefab = null;
+                _scriptController.virtualObject = null;
                 GetComponent<Button>().image.color = Color.white;
             }
             else
             {
-                _scriptController.modelPrefab = Model;
+                _scriptController.virtualObject = Model;
                 GetComponent<Button>().image.color = Color.gray;
                 foreach (var button in Others)
                 {

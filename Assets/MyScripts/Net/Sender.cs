@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace MyScripts.Net
 {
-    public class Connecting : MonoBehaviour {
+    public class Sender : MonoBehaviour {
         public Camera MainCamera;
         public Text IpText;
 

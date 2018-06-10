@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\carlo\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ARCoreTFM.438333979.00" t="ExcludeRecursive" />
-    <e p="C:\Users\carlo\OneDrive\Documents\Unity Projects\ARCoreTFM" t="IncludeRecursive">
+    <e p="C:\Users\carlo\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ARCoreTFM.-263711948.00" t="ExcludeRecursive" />
+    <e p="D:\Documentos\Unity Projects\ARCoreTFM" t="IncludeRecursive">
       <e p="ARCoreTFM.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CreateOrDelete.cs" t="Include" />
         <e p="GoogleARCore" t="Include">
           <e p="Examples" t="Include">
             <e p="ComputerVision" t="Include">
@@ -140,16 +139,16 @@
             </e>
           </e>
         </e>
+        <e p="MoveObject.cs" t="Include" />
         <e p="MyScripts" t="Include">
-          <e p="CameraInfo.cs" t="Include" />
-          <e p="Collision.cs" t="Include" />
+          <e p="CollisionDetector.cs" t="Include" />
+          <e p="CreateOrDelete.cs" t="Include" />
           <e p="ManageScan.cs" t="Include" />
           <e p="Net" t="Include">
-            <e p="CameraHelper.cs" t="Include" />
-            <e p="Connecting.cs" t="Include" />
             <e p="Loom.cs" t="Include" />
+            <e p="Sender.cs" t="Include" />
           </e>
-          <e p="SelectModelButton.cs" t="Include" />
+          <e p="ObjectSelector.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
