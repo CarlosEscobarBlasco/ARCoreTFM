@@ -25,6 +25,8 @@ namespace MyScripts.Net
     
         //This must be the-same with SEND_COUNT on the client
         private const int SEND_RECEIVE_COUNT = 20;
+        
+        string collisionMessage = "";
 
         private void Start()
         {
@@ -98,7 +100,7 @@ namespace MyScripts.Net
                 yield return endOfFrame;
 
                 // Send collision information
-                string collisionMessage = "Hola mundo";
+                
                 byte[] collisionMessageBytes = Encoding.ASCII.GetBytes(collisionMessage);
                 byteLengthToFrameByteArray(collisionMessageBytes.Length, collisionMessageLength);
                 
@@ -141,6 +143,11 @@ namespace MyScripts.Net
             cameraTexture.Apply();
             byte[] cameraTextureBytes = cameraTexture.EncodeToPNG();
             return cameraTextureBytes;
+        }
+
+        public void SetCollisionMessage(string message)
+        {
+            collisionMessage = message;
         }
 
         // stop everything
