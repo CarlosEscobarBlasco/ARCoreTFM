@@ -142,6 +142,7 @@ namespace MyScripts.Net
             cameraTexture.ReadPixels(new Rect(0, 0, targetTexture.width, targetTexture.height), 0, 0);
             cameraTexture.Apply();
             byte[] cameraTextureBytes = cameraTexture.EncodeToPNG();
+            DestroyImmediate(cameraTexture);
             return cameraTextureBytes;
         }
 

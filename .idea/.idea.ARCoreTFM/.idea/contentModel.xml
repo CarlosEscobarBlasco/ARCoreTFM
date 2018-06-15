@@ -139,7 +139,6 @@
             </e>
           </e>
         </e>
-        <e p="MoveObject.cs" t="Include" />
         <e p="MyScripts" t="Include">
           <e p="CollisionDetector.cs" t="Include" />
           <e p="CreateOrDelete.cs" t="Include" />
