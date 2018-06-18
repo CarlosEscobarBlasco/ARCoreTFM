@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="549d4617-2674-48c7-870d-3b3de006a521" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ARCoreTFM/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ARCoreTFM/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ARCoreTFM/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ARCoreTFM/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/Cube.prefab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/Cube.prefab.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/power_line_full.prefab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/power_line_full.prefab.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/tree.prefab" afterPath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Prefabs/tree.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scenes/ScanScene.unity" afterPath="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scenes/ScanScene.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoveObject.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoveObject.cs.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/edit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/edit.png.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/erase.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/erase.png.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/power line.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/power line.png.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/power_line.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/power_line.png.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/tree.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyImages/tree.png.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs" afterPath="$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" afterPath="$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Sender.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sender.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="144" column="44" lean-forward="true" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
+            <state relative-caret-position="2736">
+              <caret line="144" column="44" lean-forward="false" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
               <folding>
                 <marker date="1529055811692" expanded="true" signature="6:194" ph="..." />
                 <marker date="1529055811692" expanded="true" signature="219:5426" ph="{...}" />
@@ -66,7 +46,7 @@
       <file leaf-file-name="ARCoreBackgroundRenderer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-285">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1525773358514" expanded="true" signature="0:841" ph="/* ----------------------------------------------------------------------- ... */" />
@@ -146,14 +126,30 @@
       <file leaf-file-name="ManageScan.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state relative-caret-position="627">
+              <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
-                <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-                <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-                <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-                <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-                <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+                <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+                <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+                <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+                <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+                <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollisionDetector.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/MyScripts/CollisionDetector.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1528570244073" expanded="false" signature="6:61" ph="..." />
+                <marker date="1528570244073" expanded="true" signature="82:448" ph="{...}" />
+                <marker date="1528570244073" expanded="true" signature="135:446" ph="{...}" />
+                <marker date="1528570244073" expanded="true" signature="233:306" ph="{...}" />
+                <marker date="1528570244073" expanded="true" signature="366:430" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -175,18 +171,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/CreateOrDelete.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/ManageEdition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MyScripts/CollisionDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../VideoReceiver/Assets/Scripts/Receiver.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../VideoReceiver/Assets/Scripts/Connect.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Loom.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/CreateOrDelete.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MyScripts/ObjectSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../VideoReceiver/Assets/Scripts/Connect.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Loom.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -203,8 +199,8 @@
         <option value="$PROJECT_DIR$/Assets/MyScripts/ObjectSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/MyScripts/CreateOrDelete.cs" />
         <option value="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" />
-        <option value="$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" />
         <option value="$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs" />
+        <option value="$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs" />
       </list>
     </option>
   </component>
@@ -235,6 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -248,7 +245,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,12 +286,13 @@
       <workItem from="1528105575987" duration="1744000" />
       <workItem from="1528207709398" duration="1293000" />
       <workItem from="1528569959973" duration="3816000" />
-      <workItem from="1529055743042" duration="71000" />
+      <workItem from="1529055743042" duration="1284000" />
+      <workItem from="1529308593858" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23912000" />
+    <option name="totallyTimeSpent" value="25799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,13 +393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/MyScripts/CollisionDetector.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -415,11 +406,11 @@
         <state relative-caret-position="722">
           <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
           <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -534,13 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1843">
@@ -572,11 +557,11 @@
         <state relative-caret-position="190">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -684,11 +669,11 @@
         <state relative-caret-position="190">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -796,11 +781,11 @@
         <state relative-caret-position="190">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -857,11 +842,11 @@
         <state relative-caret-position="190">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -911,40 +896,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MoveObject.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/CreateOrDelete.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1525773358514" expanded="true" signature="0:841" ph="/* ----------------------------------------------------------------------- ... */" />
-            <marker date="1525773358514" expanded="false" signature="849:957" ph="..." />
-            <marker date="1525773358514" expanded="true" signature="981:3865" ph="{...}" />
-            <marker date="1525773358514" expanded="false" signature="994:1132" ph="..." />
-            <marker date="1525773358514" expanded="true" signature="1138:1262" ph="/// Renders the device's camera as a background to the attached Unity camera component. ... " />
-            <marker date="1525773358514" expanded="true" signature="1359:3863" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="1374:1473" ph="/// A material used to render the AR background image. ... " />
-            <marker date="1525773358514" expanded="true" signature="1716:2301" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="1772:1867" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="1912:2042" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="2335:2378" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="2409:3495" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="2463:2515" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="2626:2678" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="3527:3750" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="3583:3740" ph="{...}" />
-            <marker date="1525773358514" expanded="true" signature="3789:3848" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/Controller.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -956,13 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MyScripts/CollisionDetector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1023,24 +969,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <marker date="1528639177922" expanded="false" signature="6:88" ph="..." />
-            <marker date="1528639177922" expanded="true" signature="109:995" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="153:993" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="460:522" ph="{...}" />
-            <marker date="1528639177922" expanded="true" signature="558:988" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/MyScripts/Net/Sender.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="144" column="44" lean-forward="true" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
+        <state relative-caret-position="2736">
+          <caret line="144" column="44" lean-forward="false" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
           <folding>
             <marker date="1529055811692" expanded="true" signature="6:194" ph="..." />
             <marker date="1529055811692" expanded="true" signature="219:5426" ph="{...}" />
@@ -1059,6 +991,60 @@
             <marker date="1529055811692" expanded="true" signature="5061:5121" ph="{...}" />
             <marker date="1529055811692" expanded="true" signature="5190:5413" ph="{...}" />
             <marker date="1529055811692" expanded="true" signature="5269:5330" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525773358514" expanded="true" signature="0:841" ph="/* ----------------------------------------------------------------------- ... */" />
+            <marker date="1525773358514" expanded="false" signature="849:957" ph="..." />
+            <marker date="1525773358514" expanded="true" signature="981:3865" ph="{...}" />
+            <marker date="1525773358514" expanded="false" signature="994:1132" ph="..." />
+            <marker date="1525773358514" expanded="true" signature="1138:1262" ph="/// Renders the device's camera as a background to the attached Unity camera component. ... " />
+            <marker date="1525773358514" expanded="true" signature="1359:3863" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="1374:1473" ph="/// A material used to render the AR background image. ... " />
+            <marker date="1525773358514" expanded="true" signature="1716:2301" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="1772:1867" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="1912:2042" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="2335:2378" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="2409:3495" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="2463:2515" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="2626:2678" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="3527:3750" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="3583:3740" ph="{...}" />
+            <marker date="1525773358514" expanded="true" signature="3789:3848" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MyScripts/ManageScan.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <marker date="1529308713181" expanded="false" signature="6:88" ph="..." />
+            <marker date="1529308713181" expanded="true" signature="109:997" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="153:995" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="460:522" ph="{...}" />
+            <marker date="1529308713181" expanded="true" signature="558:990" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/MyScripts/CollisionDetector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1528570244073" expanded="false" signature="6:61" ph="..." />
+            <marker date="1528570244073" expanded="true" signature="82:448" ph="{...}" />
+            <marker date="1528570244073" expanded="true" signature="135:446" ph="{...}" />
+            <marker date="1528570244073" expanded="true" signature="233:306" ph="{...}" />
+            <marker date="1528570244073" expanded="true" signature="366:430" ph="{...}" />
           </folding>
         </state>
       </provider>

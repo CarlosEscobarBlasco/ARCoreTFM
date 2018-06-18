@@ -33,7 +33,7 @@ namespace MyScripts
 			Background.SetActive(!_enable);
 			_sesion.OnEnable();
 			GetComponentInChildren<Text>().text = _enable ? "Done" : "Edit";
-			if (!_enable) Controller.GetComponent<HelloARController>().virtualObject = null; 
+//			if (!_enable) Controller.GetComponent<HelloARController>().virtualObject = null; 
 		}
 
 
